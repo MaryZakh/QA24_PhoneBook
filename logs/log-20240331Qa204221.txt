@@ -1,0 +1,2 @@
+20:42:29.580 INFO  tests.TestBase - Start
+20:42:31.309 INFO  tests.TestBase - End
