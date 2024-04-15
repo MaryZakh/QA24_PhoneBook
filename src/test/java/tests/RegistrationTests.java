@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class RegistrationTests extends TestBase{
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void preCondition(){
         if (app.getHelperUser().isLogged()){
             app.getHelperUser().logout();
@@ -31,7 +31,7 @@ public class RegistrationTests extends TestBase{
         Assert.assertTrue(app.getHelperUser().isNoContactsHereDisplayed());
     }
 
-    @Test(description = "Bug report #12354 Fixed" )
+    @Test(description = "Bug report #12354 Fixed",groups = {"smoke"})
     public void registrationWrongEmail(){
         User user = new User().withEmail("dongmail.com").withPassword("Ddon123456$");
         logger.info("Tests run with data: --->"+user.toString());

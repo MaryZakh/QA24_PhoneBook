@@ -48,3 +48,9 @@ task qa(type:Test){
 
     }
 }
+
+task scoupe(type:Test){
+    useTestNG(){
+        suites 'src/test/resources/scoupe.xml'
+    }
+}
